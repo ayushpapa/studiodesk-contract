@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Marketing Service Contract - MakeMyBusiness & TravelDesk Studio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            text-align: left;
+            position: relative;
+            border: 1px solid #eaeaea;
+        }
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #B00020, #d32f2f);
+            border-radius: 8px 8px 0 0;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 45px;
+            border-bottom: 2px solid #B00020;
+            padding-bottom: 25px;
+            position: relative;
+        }
+        
+        h1 {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            color: #B00020;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            text-transform: uppercase;
+        }
+        
+        h2 {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            color: #B00020;
+            font-size: 1.6rem;
+            margin: 35px 0 18px 0;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 10px;
+            font-weight: 600;
+            position: relative;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: #B00020;
+        }
+        
+        h3 {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            color: #B00020;
+            font-size: 1.3rem;
+            margin: 25px 0 12px 0;
+            font-weight: 600;
+        }
+        
+        .contract-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+        
+        .info-block {
+            flex: 1;
+            min-width: 280px;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #fafafa;
+            border-radius: 6px;
+            border: 1px solid #eee;
+            text-align: center;
+        }
+        
+        .info-label {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 8px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .info-value {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            line-height: 1.4;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            padding: 25px;
+            background-color: #ffffff;
+            border-radius: 6px;
+            border: 1px solid #f0f0f0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+        }
+        
+        .section p {
+            margin-bottom: 18px;
+            text-align: justify;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+            font-size: 1.05rem;
+        }
+        
+        .highlight {
+            background-color: #fff8f8;
+            padding: 20px;
+            border-left: 4px solid #B00020;
+            margin: 25px 0;
+            border-radius: 0 6px 6px 0;
+            box-shadow: 0 2px 8px rgba(176, 0, 32, 0.08);
+        }
+        
+        .highlight p {
+            margin-bottom: 12px;
+            text-align: left;
+        }
+        
+        .highlight ul {
+            margin-left: 20px;
+        }
+        
+        .signatures-section {
+            margin-top: 60px;
+            border-top: 2px solid #B00020;
+            padding-top: 40px;
+            text-align: center;
+        }
+        
+        .signatures-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .signature-box {
+            flex: 1;
+            min-width: 280px;
+            border: 2px dashed #ccc;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            background-color: #fafafa;
+            position: relative;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+        
+        .signature-box.signed {
+            border-color: #4CAF50;
+            background-color: #f8fff8;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.25);
+        }
+        
+        .signature-box h3 {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            margin-bottom: 18px;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .signature-canvas {
+            width: 100%;
+            height: 160px;
+            border: 1px solid #ddd;
+            background-color: white;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            cursor: crosshair;
+            transition: all 0.3s ease;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+        
+        .signature-canvas:hover {
+            border-color: #B00020;
+            box-shadow: 0 0 8px rgba(176, 0, 32, 0.15);
+        }
+        
+        .signature-info {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+        
+        .signature-status {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .signature-status.signed {
+            background-color: #4CAF50;
+            color: white;
+            box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+        }
+        
+        .signature-hint {
+            font-size: 0.9rem;
+            color: #777;
+            font-style: italic;
+            margin-top: 8px;
+        }
+        
+        .clear-button {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            transition: all 0.3s;
+            font-weight: 500;
+            box-shadow: 0 2px 5px rgba(244, 67, 54, 0.2);
+        }
+        
+        .clear-button:hover {
+            background-color: #d32f2f;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 8px rgba(244, 67, 54, 0.3);
+        }
+        
+        .clear-button:active {
+            background-color: #b71c1c;
+            transform: translateY(0);
+        }
+        
+        .finalize-button {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            display: block;
+            width: 100%;
+            padding: 18px;
+            background-color: #ccc;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            cursor: not-allowed;
+            text-align: center;
+            margin-top: 40px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .finalize-button:enabled {
+            background-color: #B00020;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(176, 0, 32, 0.3);
+        }
+        
+        .finalize-button:enabled:hover {
+            background-color: #8a001a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(176, 0, 32, 0.4);
+        }
+        
+        .date-field {
+            margin-top: 25px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+        
+        .date-field p {
+            font-family: 'Georgia', serif;
+            font-size: 1.1rem;
+            color: #333;
+            margin: 0;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            .container {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.4rem;
+            }
+            
+            h3 {
+                font-size: 1.2rem;
+            }
+            
+            .contract-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .info-block {
+                min-width: 100%;
+            }
+            
+            .section {
+                padding: 20px 15px;
+            }
+            
+            .signatures-container {
+                flex-direction: column;
+                gap: 25px;
+            }
+            
+            .signature-box {
+                min-width: 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.3rem;
+            }
+            
+            .container {
+                padding: 25px 15px;
+            }
+            
+            .section {
+                padding: 15px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Digital Marketing Service Contract</h1>
+            <p>This agreement is made on December 1, 2025 between MakeMyBusiness and TravelDesk Studio</p>
+        </header>
+        
+        <section class="contract-info">
+            <div class="info-block">
+                <div class="info-label">Service Provider (Agency)</div>
+                <div class="info-value">MakeMyBusiness</div>
+                <div class="info-value">Represented by: Ayush Singh</div>
+            </div>
+            <div class="info-block">
+                <div class="info-label">Client</div>
+                <div class="info-value">TravelDesk Studio</div>
+                <div class="info-value">Represented by: Dinesh Pant</div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>1. Scope of Services</h2>
+            <p>MakeMyBusiness agrees to provide the following digital marketing services to TravelDesk Studio:</p>
+            <ul>
+                <li>Digital marketing strategy development and implementation</li>
+                <li>Social media content scheduling and management</li>
+                <li>Monthly performance reporting and analytics</li>
+                <li>Lead generation campaigns and optimization</li>
+                <li>Advertisement campaign management across platforms</li>
+                <li>Search Engine Optimization (SEO) setup and maintenance</li>
+            </ul>
+        </section>
+        
+        <section class="section">
+            <h2>2. Schedule</h2>
+            <p>This contract shall be effective from December 1, 2025 to December 30, 2025.</p>
+            <div class="highlight">
+                <p>All deliverables will be completed within this one-month period as specified in the deliverables section.</p>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>3. Deliverables</h2>
+            <p>MakeMyBusiness shall provide the following deliverables to TravelDesk Studio:</p>
+            <ul>
+                <li>Comprehensive content calendar and marketing strategy</li>
+                <li>Weekly performance reports and analytics</li>
+                <li>SEO setup including keyword research and on-page optimization</li>
+                <li>Execution of digital marketing strategy across all agreed platforms</li>
+                <li>Monthly summary report with recommendations for future campaigns</li>
+            </ul>
+        </section>
+        
+        <section class="section">
+            <h2>4. Price and Payment Terms</h2>
+            <p>The total fee for the services outlined in this contract is <strong>₹12,000</strong> per month.</p>
+            <div class="highlight">
+                <p>Payment Schedule:</p>
+                <ul>
+                    <li>50% upfront payment (₹6,000) due upon contract signing</li>
+                    <li>50% final payment (₹6,000) due upon completion of services on December 30, 2025</li>
+                    <li>All payments shall be made via UPI transfer</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>5. Legal and IP Terms</h2>
+            <h3>Confidentiality</h3>
+            <p>Both parties agree to maintain confidentiality of all business information shared during the course of this agreement.</p>
+            
+            <h3>Intellectual Property</h3>
+            <p>All intellectual property created during this contract shall remain the property of MakeMyBusiness until full payment is received, after which rights will transfer to TravelDesk Studio as agreed.</p>
+            
+            <h3>Governing Law</h3>
+            <p>This agreement shall be governed by and construed in accordance with the laws of Delhi NCR, and any disputes shall be resolved through arbitration in Delhi NCR.</p>
+        </section>
+        
+        <section class="signatures-section">
+            <h2>Signatures</h2>
+            <p>Both parties acknowledge and agree to the terms outlined in this contract by signing below:</p>
+            
+            <div class="signatures-container">
+                <div class="signature-box" id="agencySignatureBox">
+                    <div class="signature-status" id="agencySignatureStatus">✓</div>
+                    <h3>MakeMyBusiness</h3>
+                    <p class="signature-info">Ayush Singh</p>
+                    <canvas id="agencySignature" class="signature-canvas"></canvas>
+                    <p class="signature-info">Digital Signature</p>
+                    <p class="signature-hint">Click and drag to sign above</p>
+                    <button type="button" class="clear-button" data-target="agencySignature">Clear Signature</button>
+                    <input type="hidden" id="agencySignatureData" name="agencySignatureData">
+                </div>
+                
+                <div class="signature-box" id="clientSignatureBox">
+                    <div class="signature-status" id="clientSignatureStatus">✓</div>
+                    <h3>TravelDesk Studio</h3>
+                    <p class="signature-info">Dinesh Pant</p>
+                    <canvas id="clientSignature" class="signature-canvas"></canvas>
+                    <p class="signature-info">Digital Signature</p>
+                    <p class="signature-hint">Click and drag to sign above</p>
+                    <button type="button" class="clear-button" data-target="clientSignature">Clear Signature</button>
+                    <input type="hidden" id="clientSignatureData" name="clientSignatureData">
+                </div>
+            </div>
+            
+            <div class="date-field">
+                <p>Date: December 1, 2025</p>
+            </div>
+            
+            <button id="finalizeButton" class="finalize-button" disabled>Finalize Contract</button>
+        </section>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Signature capture functionality
+            class SignatureCapture {
+                constructor(canvasId, hiddenInputId, boxId, statusId) {
+                    this.canvas = document.getElementById(canvasId);
+                    this.hiddenInput = document.getElementById(hiddenInputId);
+                    this.signatureBox = document.getElementById(boxId);
+                    this.signatureStatus = document.getElementById(statusId);
+                    this.ctx = this.canvas.getContext('2d');
+                    this.isDrawing = false;
+                    this.lastX = 0;
+                    this.lastY = 0;
+                    
+                    // Set canvas size
+                    this.resizeCanvas();
+                    
+                    // Set drawing styles
+                    this.ctx.strokeStyle = '#000';
+                    this.ctx.lineWidth = 2;
+                    this.ctx.lineCap = 'round';
+                    this.ctx.lineJoin = 'round';
+                    
+                    // Bind event handlers
+                    this.bindEvents();
+                    
+                    // Initialize signature status
+                    this.updateSignatureStatus();
+                }
+                
+                resizeCanvas() {
+                    // Get the display size of the canvas
+                    const rect = this.canvas.getBoundingClientRect();
+                    const dpr = window.devicePixelRatio || 1;
+                    
+                    // Set the actual canvas size in memory
+                    this.canvas.width = rect.width * dpr;
+                    this.canvas.height = rect.height * dpr;
+                    
+                    // Scale the drawing context to match the display size
+                    this.ctx.scale(dpr, dpr);
+                    
+                    // Set the canvas CSS size
+                    this.canvas.style.width = rect.width + 'px';
+                    this.canvas.style.height = rect.height + 'px';
+                    
+                    // Reapply drawing styles after resize
+                    this.ctx.strokeStyle = '#000';
+                    this.ctx.lineWidth = 2;
+                    this.ctx.lineCap = 'round';
+                    this.ctx.lineJoin = 'round';
+                }
+                
+                bindEvents() {
+                    // Mouse events
+                    this.canvas.addEventListener('mousedown', this.startDrawing.bind(this));
+                    this.canvas.addEventListener('mousemove', this.draw.bind(this));
+                    this.canvas.addEventListener('mouseup', this.stopDrawing.bind(this));
+                    this.canvas.addEventListener('mouseout', this.stopDrawing.bind(this));
+                    
+                    // Touch events for mobile
+                    this.canvas.addEventListener('touchstart', this.handleTouch.bind(this));
+                    this.canvas.addEventListener('touchmove', this.handleTouch.bind(this));
+                    this.canvas.addEventListener('touchend', this.stopDrawing.bind(this));
+                    
+                    // Window resize
+                    window.addEventListener('resize', this.resizeCanvas.bind(this));
+                }
+                
+                startDrawing(e) {
+                    this.isDrawing = true;
+                    const rect = this.canvas.getBoundingClientRect();
+                    this.lastX = e.clientX - rect.left;
+                    this.lastY = e.clientY - rect.top;
+                }
+                
+                draw(e) {
+                    if (!this.isDrawing) return;
+                    
+                    const rect = this.canvas.getBoundingClientRect();
+                    const currentX = e.clientX - rect.left;
+                    const currentY = e.clientY - rect.top;
+                    
+                    this.ctx.beginPath();
+                    this.ctx.moveTo(this.lastX, this.lastY);
+                    this.ctx.lineTo(currentX, currentY);
+                    this.ctx.stroke();
+                    
+                    this.lastX = currentX;
+                    this.lastY = currentY;
+                }
+                
+                stopDrawing() {
+                    if (this.isDrawing) {
+                        this.isDrawing = false;
+                        this.saveSignature();
+                    }
+                }
+                
+                handleTouch(e) {
+                    e.preventDefault(); // Prevent scrolling when drawing on canvas
+                    
+                    const touch = e.touches[0];
+                    const mouseEvent = new MouseEvent(e.type === 'touchstart' ? 'mousedown' :
+                                                     e.type === 'touchmove' ? 'mousemove' : 'mouseup', {
+                        clientX: touch.clientX,
+                        clientY: touch.clientY
+                    });
+                    
+                    if (e.type === 'touchstart') {
+                        this.startDrawing(mouseEvent);
+                    } else if (e.type === 'touchmove') {
+                        this.draw(mouseEvent);
+                    }
+                }
+                
+                saveSignature() {
+                    // Save the signature as Base64 data
+                    const signatureData = this.canvas.toDataURL();
+                    this.hiddenInput.value = signatureData;
+                    this.updateSignatureStatus();
+                    checkButtonState();
+                }
+                
+                clear() {
+                    const rect = this.canvas.getBoundingClientRect();
+                    this.ctx.clearRect(0, 0, rect.width, rect.height);
+                    this.hiddenInput.value = '';
+                    this.updateSignatureStatus();
+                    checkButtonState();
+                }
+                
+                updateSignatureStatus() {
+                    const hasSignature = this.hiddenInput.value && this.hiddenInput.value.trim() !== '';
+                    
+                    if (hasSignature) {
+                        this.signatureBox.classList.add('signed');
+                        this.signatureStatus.classList.add('signed');
+                        this.signatureStatus.textContent = '✓';
+                    } else {
+                        this.signatureBox.classList.remove('signed');
+                        this.signatureStatus.classList.remove('signed');
+                        this.signatureStatus.textContent = '';
+                    }
+                }
+                
+                hasSignature() {
+                    return this.hiddenInput.value && this.hiddenInput.value.trim() !== '';
+                }
+            }
+            
+            // Button state management
+            function checkButtonState() {
+                const agencyHasSignature = agencySignature.hasSignature();
+                const clientHasSignature = clientSignature.hasSignature();
+                const finalizeButton = document.getElementById('finalizeButton');
+                
+                if (agencyHasSignature && clientHasSignature) {
+                    finalizeButton.disabled = false;
+                    finalizeButton.textContent = 'Finalize Contract';
+                } else {
+                    finalizeButton.disabled = true;
+                    const missingSignatures = [];
+                    if (!agencyHasSignature) missingSignatures.push('Agency');
+                    if (!clientHasSignature) missingSignatures.push('Client');
+                    
+                    if (missingSignatures.length === 1) {
+                        finalizeButton.textContent = `Waiting for ${missingSignatures[0]} signature`;
+                    } else {
+                        finalizeButton.textContent = 'Waiting for both signatures';
+                    }
+                }
+            }
+            
+            // Initialize signature captures
+            const agencySignature = new SignatureCapture('agencySignature', 'agencySignatureData', 'agencySignatureBox', 'agencySignatureStatus');
+            const clientSignature = new SignatureCapture('clientSignature', 'clientSignatureData', 'clientSignatureBox', 'clientSignatureStatus');
+            
+            // Clear button functionality
+            document.querySelectorAll('.clear-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetCanvasId = this.getAttribute('data-target');
+                    if (targetCanvasId === 'agencySignature') {
+                        agencySignature.clear();
+                    } else if (targetCanvasId === 'clientSignature') {
+                        clientSignature.clear();
+                    }
+                });
+            });
+            
+            // Initialize button state
+            checkButtonState();
+            
+            // Monitor signature data changes for real-time updates
+            const agencySignatureData = document.getElementById('agencySignatureData');
+            const clientSignatureData = document.getElementById('clientSignatureData');
+            
+            // Create observers to detect changes to signature data
+            const observerConfig = { attributes: true, childList: false, subtree: false, attributeFilter: ['value'] };
+            
+            const agencyObserver = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (mutation.type === 'attributes' && mutation.attributeName === 'value') {
+                        agencySignature.updateSignatureStatus();
+                        checkButtonState();
+                    }
+                });
+            });
+            
+            const clientObserver = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (mutation.type === 'attributes' && mutation.attributeName === 'value') {
+                        clientSignature.updateSignatureStatus();
+                        checkButtonState();
+                    }
+                });
+            });
+            
+            agencyObserver.observe(agencySignatureData, observerConfig);
+            clientObserver.observe(clientSignatureData, observerConfig);
+            
+            // Finalize Contract functionality
+            function finalizeContract() {
+                // Validate that both signatures are present
+                const agencySignatureData = document.getElementById('agencySignatureData').value;
+                const clientSignatureData = document.getElementById('clientSignatureData').value;
+                
+                if (!agencySignatureData || agencySignatureData.trim() === '') {
+                    alert('Agency signature is required before finalizing the contract.');
+                    return;
+                }
+                
+                if (!clientSignatureData || clientSignatureData.trim() === '') {
+                    alert('Client signature is required before finalizing the contract.');
+                    return;
+                }
+                
+                // Create a temporary container for the paper-like document
+                const tempContainer = document.createElement('div');
+                tempContainer.style.position = 'absolute';
+                tempContainer.style.left = '-9999px';
+                tempContainer.style.top = '0';
+                tempContainer.style.width = '900px';
+                tempContainer.style.backgroundColor = '#ffffff';
+                tempContainer.style.padding = '40px';
+                tempContainer.style.fontFamily = 'Georgia, serif';
+                tempContainer.style.color = '#333333';
+                tempContainer.style.boxShadow = '0 0 10px rgba(0,0,0,0.1)';
+                tempContainer.style.borderRadius = '2px';
+                
+                // Create paper texture overlay
+                const paperTexture = document.createElement('div');
+                paperTexture.style.position = 'absolute';
+                paperTexture.style.top = '0';
+                paperTexture.style.left = '0';
+                paperTexture.style.width = '100%';
+                paperTexture.style.height = '100%';
+                paperTexture.style.backgroundImage = 'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.01) 2px, rgba(0,0,0,0.01) 4px)';
+                paperTexture.style.pointerEvents = 'none';
+                paperTexture.style.zIndex = '1';
+                tempContainer.appendChild(paperTexture);
+                
+                // Create content wrapper
+                const contentWrapper = document.createElement('div');
+                contentWrapper.style.position = 'relative';
+                contentWrapper.style.zIndex = '2';
+                
+                // Add header
+                const header = document.createElement('div');
+                header.style.textAlign = 'center';
+                header.style.marginBottom = '40px';
+                header.style.borderBottom = '2px solid #B00020';
+                header.style.paddingBottom = '20px';
+                
+                const title = document.createElement('h1');
+                title.textContent = 'Digital Marketing Service Contract';
+                title.style.color = '#B00020';
+                title.style.fontSize = '28px';
+                title.style.marginBottom = '10px';
+                title.style.fontWeight = '700';
+                title.style.fontFamily = 'Georgia, serif';
+                
+                const subtitle = document.createElement('p');
+                subtitle.textContent = 'This agreement is made on December 1, 2025 between MakeMyBusiness and TravelDesk Studio';
+                subtitle.style.fontSize = '16px';
+                subtitle.style.marginBottom = '0';
+                subtitle.style.fontFamily = 'Georgia, serif';
+                
+                header.appendChild(title);
+                header.appendChild(subtitle);
+                contentWrapper.appendChild(header);
+                
+                // Add contract info
+                const contractInfo = document.createElement('div');
+                contractInfo.style.display = 'flex';
+                contractInfo.style.justifyContent = 'space-between';
+                contractInfo.style.marginBottom = '30px';
+                
+                const agencyInfo = document.createElement('div');
+                agencyInfo.style.flex = '1';
+                agencyInfo.style.minWidth = '250px';
+                
+                const agencyLabel = document.createElement('div');
+                agencyLabel.textContent = 'Service Provider (Agency)';
+                agencyLabel.style.fontWeight = 'bold';
+                agencyLabel.style.color = '#555';
+                agencyLabel.style.marginBottom = '5px';
+                
+                const agencyName = document.createElement('div');
+                agencyName.textContent = 'MakeMyBusiness';
+                agencyName.style.fontSize = '18px';
+                agencyName.style.marginBottom = '5px';
+                
+                const agencyRep = document.createElement('div');
+                agencyRep.textContent = 'Represented by: Ayush Singh';
+                agencyRep.style.fontSize = '16px';
+                
+                agencyInfo.appendChild(agencyLabel);
+                agencyInfo.appendChild(agencyName);
+                agencyInfo.appendChild(agencyRep);
+                
+                const clientInfo = document.createElement('div');
+                clientInfo.style.flex = '1';
+                clientInfo.style.minWidth = '250px';
+                
+                const clientLabel = document.createElement('div');
+                clientLabel.textContent = 'Client';
+                clientLabel.style.fontWeight = 'bold';
+                clientLabel.style.color = '#555';
+                clientLabel.style.marginBottom = '5px';
+                
+                const clientName = document.createElement('div');
+                clientName.textContent = 'TravelDesk Studio';
+                clientName.style.fontSize = '18px';
+                clientName.style.marginBottom = '5px';
+                
+                const clientRep = document.createElement('div');
+                clientRep.textContent = 'Represented by: Dinesh Pant';
+                clientRep.style.fontSize = '16px';
+                
+                clientInfo.appendChild(clientLabel);
+                clientInfo.appendChild(clientName);
+                clientInfo.appendChild(clientRep);
+                
+                contractInfo.appendChild(agencyInfo);
+                contractInfo.appendChild(clientInfo);
+                contentWrapper.appendChild(contractInfo);
+                
+                // Add contract sections (simplified for paper document)
+                const sections = [
+                    {
+                        title: '1. Scope of Services',
+                        content: 'MakeMyBusiness agrees to provide digital marketing services including strategy development, social media management, performance reporting, lead generation campaigns, advertisement management, and SEO setup and maintenance.'
+                    },
+                    {
+                        title: '2. Schedule',
+                        content: 'This contract shall be effective from December 1, 2025 to December 30, 2025. All deliverables will be completed within this one-month period.'
+                    },
+                    {
+                        title: '3. Deliverables',
+                        content: 'MakeMyBusiness shall provide comprehensive content calendar, weekly performance reports, SEO setup, execution of marketing strategy, and monthly summary report with recommendations.'
+                    },
+                    {
+                        title: '4. Price and Payment Terms',
+                        content: 'The total fee for the services is ₹12,000 per month. Payment Schedule: 50% upfront (₹6,000) due upon signing, 50% final payment (₹6,000) due on December 30, 2025. All payments via UPI transfer.'
+                    },
+                    {
+                        title: '5. Legal and IP Terms',
+                        content: 'Both parties agree to maintain confidentiality. All intellectual property created during this contract shall remain the property of MakeMyBusiness until full payment is received. This agreement shall be governed by the laws of Delhi NCR.'
+                    }
+                ];
+                
+                sections.forEach(section => {
+                    const sectionDiv = document.createElement('div');
+                    sectionDiv.style.marginBottom = '25px';
+                    
+                    const sectionTitle = document.createElement('h2');
+                    sectionTitle.textContent = section.title;
+                    sectionTitle.style.color = '#B00020';
+                    sectionTitle.style.fontSize = '20px';
+                    sectionTitle.style.marginBottom = '10px';
+                    sectionTitle.style.borderBottom = '1px solid #e0e0e0';
+                    sectionTitle.style.paddingBottom = '5px';
+                    
+                    const sectionContent = document.createElement('p');
+                    sectionContent.textContent = section.content;
+                    sectionContent.style.fontSize = '16px';
+                    sectionContent.style.lineHeight = '1.5';
+                    sectionContent.style.marginBottom = '0';
+                    
+                    sectionDiv.appendChild(sectionTitle);
+                    sectionDiv.appendChild(sectionContent);
+                    contentWrapper.appendChild(sectionDiv);
+                });
+                
+                // Add signatures section
+                const signaturesSection = document.createElement('div');
+                signaturesSection.style.marginTop = '40px';
+                signaturesSection.style.borderTop = '2px solid #B00020';
+                signaturesSection.style.paddingTop = '30px';
+                
+                const signaturesTitle = document.createElement('h2');
+                signaturesTitle.textContent = 'Signatures';
+                signaturesTitle.style.color = '#B00020';
+                signaturesTitle.style.fontSize = '20px';
+                signaturesTitle.style.marginBottom = '15px';
+                signaturesTitle.style.borderBottom = '1px solid #e0e0e0';
+                signaturesTitle.style.paddingBottom = '5px';
+                
+                const signaturesText = document.createElement('p');
+                signaturesText.textContent = 'Both parties acknowledge and agree to the terms outlined in this contract by signing below:';
+                signaturesText.style.fontSize = '16px';
+                signaturesText.style.marginBottom = '20px';
+                
+                signaturesSection.appendChild(signaturesTitle);
+                signaturesSection.appendChild(signaturesText);
+                
+                // Create signature areas
+                const signaturesContainer = document.createElement('div');
+                signaturesContainer.style.display = 'flex';
+                signaturesContainer.style.justifyContent = 'space-between';
+                signaturesContainer.style.gap = '30px';
+                signaturesContainer.style.marginBottom = '20px';
+                
+                // Agency signature area
+                const agencySignatureArea = document.createElement('div');
+                agencySignatureArea.style.flex = '1';
+                agencySignatureArea.style.minWidth = '250px';
+                agencySignatureArea.style.textAlign = 'center';
+                
+                const agencySignatureTitle = document.createElement('h3');
+                agencySignatureTitle.textContent = 'MakeMyBusiness';
+                agencySignatureTitle.style.fontSize = '18px';
+                agencySignatureTitle.style.marginBottom = '5px';
+                agencySignatureTitle.style.color = '#333';
+                
+                const agencySignatureRep = document.createElement('p');
+                agencySignatureRep.textContent = 'Ayush Singh';
+                agencySignatureRep.style.fontSize = '16px';
+                agencySignatureRep.style.marginBottom = '10px';
+                agencySignatureRep.style.color = '#555';
+                
+                const agencySignatureImg = document.createElement('img');
+                agencySignatureImg.src = agencySignatureData;
+                agencySignatureImg.style.width = '100%';
+                agencySignatureImg.style.height = '120px';
+                agencySignatureImg.style.border = '1px solid #ddd';
+                agencySignatureImg.style.borderRadius = '4px';
+                agencySignatureImg.style.backgroundColor = '#fff';
+                agencySignatureImg.style.objectFit = 'contain';
+                agencySignatureImg.style.padding = '5px';
+                
+                const agencySignatureLabel = document.createElement('p');
+                agencySignatureLabel.textContent = 'Digital Signature';
+                agencySignatureLabel.style.fontSize = '14px';
+                agencySignatureLabel.style.color = '#666';
+                agencySignatureLabel.style.marginTop = '5px';
+                
+                agencySignatureArea.appendChild(agencySignatureTitle);
+                agencySignatureArea.appendChild(agencySignatureRep);
+                agencySignatureArea.appendChild(agencySignatureImg);
+                agencySignatureArea.appendChild(agencySignatureLabel);
+                
+                // Client signature area
+                const clientSignatureArea = document.createElement('div');
+                clientSignatureArea.style.flex = '1';
+                clientSignatureArea.style.minWidth = '250px';
+                clientSignatureArea.style.textAlign = 'center';
+                
+                const clientSignatureTitle = document.createElement('h3');
+                clientSignatureTitle.textContent = 'TravelDesk Studio';
+                clientSignatureTitle.style.fontSize = '18px';
+                clientSignatureTitle.style.marginBottom = '5px';
+                clientSignatureTitle.style.color = '#333';
+                
+                const clientSignatureRep = document.createElement('p');
+                clientSignatureRep.textContent = 'Dinesh Pant';
+                clientSignatureRep.style.fontSize = '16px';
+                clientSignatureRep.style.marginBottom = '10px';
+                clientSignatureRep.style.color = '#555';
+                
+                const clientSignatureImg = document.createElement('img');
+                clientSignatureImg.src = clientSignatureData;
+                clientSignatureImg.style.width = '100%';
+                clientSignatureImg.style.height = '120px';
+                clientSignatureImg.style.border = '1px solid #ddd';
+                clientSignatureImg.style.borderRadius = '4px';
+                clientSignatureImg.style.backgroundColor = '#fff';
+                clientSignatureImg.style.objectFit = 'contain';
+                clientSignatureImg.style.padding = '5px';
+                
+                const clientSignatureLabel = document.createElement('p');
+                clientSignatureLabel.textContent = 'Digital Signature';
+                clientSignatureLabel.style.fontSize = '14px';
+                clientSignatureLabel.style.color = '#666';
+                clientSignatureLabel.style.marginTop = '5px';
+                
+                clientSignatureArea.appendChild(clientSignatureTitle);
+                clientSignatureArea.appendChild(clientSignatureRep);
+                clientSignatureArea.appendChild(clientSignatureImg);
+                clientSignatureArea.appendChild(clientSignatureLabel);
+                
+                signaturesContainer.appendChild(agencySignatureArea);
+                signaturesContainer.appendChild(clientSignatureArea);
+                signaturesSection.appendChild(signaturesContainer);
+                
+                // Add date and finalization timestamp
+                const dateField = document.createElement('div');
+                dateField.style.marginTop = '20px';
+                dateField.style.padding = '10px';
+                dateField.style.backgroundColor = '#f0f0f0';
+                dateField.style.borderRadius = '4px';
+                dateField.style.textAlign = 'center';
+                
+                const contractDate = document.createElement('p');
+                contractDate.textContent = 'Contract Date: December 1, 2025';
+                contractDate.style.fontSize = '16px';
+                contractDate.style.marginBottom = '5px';
+                
+                const finalizedDate = document.createElement('p');
+                finalizedDate.textContent = `Finalized on: ${new Date().toLocaleString()}`;
+                finalizedDate.style.fontSize = '14px';
+                finalizedDate.style.color = '#666';
+                finalizedDate.style.marginBottom = '0';
+                
+                dateField.appendChild(contractDate);
+                dateField.appendChild(finalizedDate);
+                signaturesSection.appendChild(dateField);
+                
+                contentWrapper.appendChild(signaturesSection);
+                tempContainer.appendChild(contentWrapper);
+                
+                // Add the temporary container to the body
+                document.body.appendChild(tempContainer);
+                
+                // Use html2canvas to capture the temporary container
+                html2canvas(tempContainer, {
+                    scale: 2, // Higher resolution
+                    useCORS: true,
+                    logging: false,
+                    backgroundColor: '#ffffff'
+                }).then(canvas => {
+                    // Remove the temporary container
+                    document.body.removeChild(tempContainer);
+                    
+                    // Create a download link
+                    const link = document.createElement('a');
+                    link.download = `Digital_Marketing_Contract_${new Date().toISOString().split('T')[0]}.png`;
+                    link.href = canvas.toDataURL('image/png');
+                    link.click();
+                    
+                    // Show success message
+                    const successMessage = document.createElement('div');
+                    successMessage.textContent = 'Contract finalized successfully! Download started.';
+                    successMessage.style.position = 'fixed';
+                    successMessage.style.top = '20px';
+                    successMessage.style.left = '50%';
+                    successMessage.style.transform = 'translateX(-50%)';
+                    successMessage.style.backgroundColor = '#4CAF50';
+                    successMessage.style.color = 'white';
+                    successMessage.style.padding = '15px 25px';
+                    successMessage.style.borderRadius = '5px';
+                    successMessage.style.boxShadow = '0 4px 8px rgba(0,0,0,0.2)';
+                    successMessage.style.zIndex = '1000';
+                    successMessage.style.fontSize = '16px';
+                    
+                    document.body.appendChild(successMessage);
+                    
+                    // Remove the success message after 3 seconds
+                    setTimeout(() => {
+                        document.body.removeChild(successMessage);
+                    }, 3000);
+                }).catch(error => {
+                    // Remove the temporary container
+                    document.body.removeChild(tempContainer);
+                    
+                    console.error('Error generating contract image:', error);
+                    alert('There was an error generating the contract image. Please try again.');
+                });
+            }
+            
+            // Add event listener for the Finalize Contract button
+            document.getElementById('finalizeButton').addEventListener('click', finalizeContract);
+        });
+    </script>
+</body>
+</html>
