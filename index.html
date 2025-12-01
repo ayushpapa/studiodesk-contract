@@ -875,23 +875,49 @@
                 const sections = [
                     {
                         title: '1. Scope of Services',
-                        content: 'MakeMyBusiness agrees to provide digital marketing services including strategy development, social media management, performance reporting, lead generation campaigns, advertisement management, and SEO setup and maintenance.'
+                        content: 'MakeMyBusiness agrees to provide the following digital marketing services to TravelDesk Studio:',
+                        bulletPoints: [
+                            'Digital marketing strategy development and implementation',
+                            'Social media content scheduling and management',
+                            'Monthly performance reporting and analytics',
+                            'Lead generation campaigns and optimization',
+                            'Advertisement campaign management across platforms',
+                            'Search Engine Optimization (SEO) setup and maintenance'
+                        ]
                     },
                     {
                         title: '2. Schedule',
-                        content: 'This contract shall be effective from December 1, 2025 to December 30, 2025. All deliverables will be completed within this one-month period.'
+                        content: 'This contract shall be effective from December 1, 2025 to December 30, 2025.\n\nAll deliverables will be completed within this one-month period as specified in the deliverables section.',
+                        bulletPoints: []
                     },
                     {
                         title: '3. Deliverables',
-                        content: 'MakeMyBusiness shall provide comprehensive content calendar, weekly performance reports, SEO setup, execution of marketing strategy, and monthly summary report with recommendations.'
+                        content: 'MakeMyBusiness shall provide the following deliverables to TravelDesk Studio:',
+                        bulletPoints: [
+                            'Comprehensive content calendar and marketing strategy',
+                            'Weekly performance reports and analytics',
+                            'SEO setup including keyword research and on-page optimization',
+                            'Execution of digital marketing strategy across all agreed platforms',
+                            'Monthly summary report with recommendations for future campaigns'
+                        ]
                     },
                     {
                         title: '4. Price and Payment Terms',
-                        content: 'The total fee for the services is ₹12,000 per month. Payment Schedule: 50% upfront (₹6,000) due upon signing, 50% final payment (₹6,000) due on December 30, 2025. All payments via UPI transfer.'
+                        content: 'The total fee for the services outlined in this contract is ₹12,000 per month.\n\nPayment Schedule:',
+                        bulletPoints: [
+                            '50% upfront payment (₹6,000) due upon contract signing',
+                            '50% final payment (₹6,000) due upon completion of services on December 30, 2025',
+                            'All payments shall be made via UPI transfer'
+                        ]
                     },
                     {
                         title: '5. Legal and IP Terms',
-                        content: 'Both parties agree to maintain confidentiality. All intellectual property created during this contract shall remain the property of MakeMyBusiness until full payment is received. This agreement shall be governed by the laws of Delhi NCR.'
+                        content: '',
+                        bulletPoints: [
+                            'Confidentiality\nBoth parties agree to maintain confidentiality of all business information shared during the course of this agreement.',
+                            'Intellectual Property\nAll intellectual property created during this contract shall remain the property of MakeMyBusiness until full payment is received, after which rights will transfer to TravelDesk Studio as agreed.',
+                            'Governing Law\nThis agreement shall be governed by and construed in accordance with the laws of Delhi NCR, and any disputes shall be resolved through arbitration in Delhi NCR.'
+                        ]
                     }
                 ];
                 
@@ -906,15 +932,61 @@
                     sectionTitle.style.marginBottom = '10px';
                     sectionTitle.style.borderBottom = '1px solid #e0e0e0';
                     sectionTitle.style.paddingBottom = '5px';
-                    
-                    const sectionContent = document.createElement('p');
-                    sectionContent.textContent = section.content;
-                    sectionContent.style.fontSize = '16px';
-                    sectionContent.style.lineHeight = '1.5';
-                    sectionContent.style.marginBottom = '0';
+                    sectionTitle.style.textAlign = 'left'; // Left-align h2 headings as requested
                     
                     sectionDiv.appendChild(sectionTitle);
-                    sectionDiv.appendChild(sectionContent);
+                    
+                    // Add section content if it exists
+                    if (section.content && section.content.trim() !== '') {
+                        const sectionContent = document.createElement('p');
+                        sectionContent.textContent = section.content;
+                        sectionContent.style.fontSize = '16px';
+                        sectionContent.style.lineHeight = '1.5';
+                        sectionContent.style.marginBottom = '15px';
+                        sectionContent.style.textAlign = 'left';
+                        sectionContent.style.whiteSpace = 'pre-line'; // Preserve line breaks
+                        
+                        sectionDiv.appendChild(sectionContent);
+                    }
+                    
+                    // Add bullet points if they exist
+                    if (section.bulletPoints && section.bulletPoints.length > 0) {
+                        const bulletList = document.createElement('ul');
+                        bulletList.style.marginLeft = '30px';
+                        bulletList.style.marginBottom = '15px';
+                        bulletList.style.textAlign = 'left';
+                        
+                        section.bulletPoints.forEach(bullet => {
+                            const listItem = document.createElement('li');
+                            
+                            // Check if bullet point contains a title (like "Confidentiality:")
+                            if (bullet.includes('\n')) {
+                                const parts = bullet.split('\n');
+                                const bulletTitle = document.createElement('strong');
+                                bulletTitle.textContent = parts[0];
+                                listItem.appendChild(bulletTitle);
+                                
+                                if (parts.length > 1) {
+                                    const bulletContent = document.createElement('div');
+                                    bulletContent.style.marginTop = '5px';
+                                    bulletContent.textContent = parts.slice(1).join('\n');
+                                    bulletContent.style.whiteSpace = 'pre-line';
+                                    listItem.appendChild(bulletContent);
+                                }
+                            } else {
+                                listItem.textContent = bullet;
+                            }
+                            
+                            listItem.style.marginBottom = '12px';
+                            listItem.style.lineHeight = '1.6';
+                            listItem.style.fontSize = '16px';
+                            
+                            bulletList.appendChild(listItem);
+                        });
+                        
+                        sectionDiv.appendChild(bulletList);
+                    }
+                    
                     contentWrapper.appendChild(sectionDiv);
                 });
                 
