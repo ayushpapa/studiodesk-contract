@@ -1176,8 +1176,18 @@
                 });
             }
             
-            // Add event listener for the Finalize Contract button
-            document.getElementById('finalizeButton').addEventListener('click', finalizeContract);
+            // Add event listener for the Finalize Contract button (ensure it's only added once)
+            const finalizeButton = document.getElementById('finalizeButton');
+            if (finalizeButton) {
+                // Remove any existing listeners to prevent duplicates
+                finalizeButton.replaceWith(finalizeButton.cloneNode(true));
+                const newFinalizeButton = document.getElementById('finalizeButton');
+                newFinalizeButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    finalizeContract();
+                });
+            }
         });
     </script>
 </body>
